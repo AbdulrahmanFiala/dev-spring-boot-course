@@ -12,7 +12,7 @@ public class DemoController {
     private Coach myCoach;
     // define a constructor for dependency injection
     @Autowired
-    public DemoController(@Qualifier("trackCoach") Coach thecoach){
+    public DemoController( Coach thecoach){
         myCoach = thecoach;
     }
     // define a setter method for dependency injection
