@@ -14,7 +14,7 @@ public class DemoController {
     // define a constructor for dependency injection
     @Autowired
     public DemoController(@Qualifier("aquatic") Coach thecoach) {
-        System.out.println("In constructor: " + getClass().getSimpleName());
+//        System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = thecoach;
     }
     // define a setter method for dependency injection
