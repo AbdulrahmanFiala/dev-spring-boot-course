@@ -19,19 +19,19 @@ public class MycoolappApplication {
         SpringApplication.run(MycoolappApplication.class, args);
     }
 
-    @Bean
-    public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
-        return runner -> {
-            //createStudent(studentDAO);
-            createMultipleStudents(studentDAO);
+//    @Bean
+//    public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
+//        return runner -> {
+    //createStudent(studentDAO);
+//            createMultipleStudents(studentDAO);
 //            readStudent(studentDAO);
 //            queryForStudnets(studentDAO);
 //            queryForStudentByLastName(studentDAO);
 //            updateStudent(studentDAO);
 //            deleteStudent(studentDAO);
 //            deleteAllStudents(studentDAO);
-        };
-    }
+//        };
+//    }
 
     private void deleteAllStudents(StudentDAO studentDAO) {
         System.out.println(studentDAO.deleteAll());
@@ -39,14 +39,14 @@ public class MycoolappApplication {
 
     private void deleteStudent(StudentDAO studentDAO) {
         // retrieve student based on the id: primary key
-        int studentId=3;
+        int studentId = 3;
         System.out.println("Deleting student ...");
         studentDAO.delete(studentId);
     }
 
     private void updateStudent(StudentDAO studentDAO) {
         // retrieve student based on the id: primary key
-        int studentId=1;
+        int studentId = 1;
         System.out.println("Getting student with id " + studentId);
 
         Student myStudent = studentDAO.findById(studentId);
