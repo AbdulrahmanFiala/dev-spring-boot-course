@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class DemoController {
+public class DemoRestController1 {
     // define a private field for the dependency
     private Coach myCoach;
 
     // define a constructor for dependency injection
     @Autowired
-    public DemoController(@Qualifier("aquatic") Coach thecoach) {
+    public DemoRestController1(@Qualifier("aquatic") Coach thecoach) {
 //        System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = thecoach;
     }
