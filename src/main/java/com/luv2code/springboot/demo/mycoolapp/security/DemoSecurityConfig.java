@@ -36,6 +36,7 @@ public class DemoSecurityConfig {
                 configurer
                         .requestMatchers(HttpMethod.GET, "/api/employees").hasRole("EMPLOYEE")
                         .requestMatchers(HttpMethod.GET, "/**").hasRole("EMPLOYEE")
+                        .requestMatchers(HttpMethod.POST, "/**").hasRole("EMPLOYEE")
                         .requestMatchers(HttpMethod.GET, "/api/employees/**").hasRole("EMPLOYEE")
                         .requestMatchers(HttpMethod.POST, "/api/employees").hasRole("MANAGER")
                         .requestMatchers(HttpMethod.PUT, "/api/employees/**").hasRole("MANAGER")

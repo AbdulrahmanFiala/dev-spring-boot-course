@@ -18,7 +18,7 @@ public class FunRestController {
         return "Coach: " + coachName + ", Team name: " + teamName;
     }
     // expose "/" that return "Hello World"
-    @GetMapping("/")
+    @GetMapping("/hello2")
     public String sayHello(){
         return "Hello World!";
     }
